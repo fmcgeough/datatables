@@ -16,5 +16,4 @@ defmodule Datatables.ZipApiView do
       state: zip.state
     }
   end
-
 end

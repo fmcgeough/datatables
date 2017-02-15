@@ -9,4 +9,21 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-Repo.insert! %Player{ name: "Mark",  date_of_birth: %Ecto.Date{ year: 1970,  month: 1,   day:  2 }}
+alias Datatables.Zip
+alias Datatables.Repo
+
+defmodule Datatables.Seeds do
+
+  def store_it(row) do
+    changeset = Zip.changeset(%Zip{}, row)
+    Repo.insert!(changeset)
+  end
+
+end
+
+current_dir = Path.dirname(__ENV__.file)
+csv_file = "#{Path.expand("zip_codes.csv", current_dir)}"
+File.stream!(csv_file)
+  |> Stream.drop(1)
+  |> CSV.decode(headers: [:zip_code, :city, :state])
+  |> Enum.each(&Datatables.Seeds.store_it/1)

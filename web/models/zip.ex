@@ -1,5 +1,6 @@
 defmodule Datatables.Zip do
   use Ecto.Schema
+  import Ecto.Changeset
 
   schema "zips" do
     field :zip_code,  :string
@@ -9,4 +10,10 @@ defmodule Datatables.Zip do
     timestamps
   end
 
+  @required_fields ~w(zip_code city state)
+
+  def changeset(model, params \\ :empty) do
+    model
+    |> cast(params, @required_fields)
+  end
 end
