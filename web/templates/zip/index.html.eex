@@ -1,0 +1,11 @@
+<div class="table-responsive">
+  <table id="zips" class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Zipcode</th>
+      <th>City</th>
+      <th>State</th>
+    </tr>
+  </thead>
+</table>
+</div>
