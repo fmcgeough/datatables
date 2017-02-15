@@ -15,7 +15,7 @@ To run the demonstration :
       mix run priv/repo/seeds.exs
       mix phoenix.server
 
-Now you can visit [`localhost:4000`](http://localhost:4000/zips) from your browser to see the
+Now you can visit [`localhost:4000/zips`](http://localhost:4000/zips) from your browser to see the
 page that uses datatables.
 
 
