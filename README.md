@@ -14,6 +14,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 ## About this Sample Project
 
 This is a simple demonstration of [datatables.js](http://datatables.net/) and how to use server-side paging.
+There's an accompanying blog post at [fmcgeough.github.io](http://fmcgeough.github.io/phoenix-and-datatables/).
 
 ## Learn more
 
