@@ -1,7 +1,6 @@
 # Datatables
 
 This is a simple demonstration of [datatables.js](http://datatables.net/) and how to use server-side paging.
-There's an accompanying blog post at [fmcgeough.github.io](http://fmcgeough.github.io/phoenix-and-datatables/).
 It creates a single table in the development Postgres instance called "zips". The zipcode data is populated
 by the zip_codes.csv file in the priv/repo directory. See seeds.exs for the code that is used to populate it.
 
